@@ -14,7 +14,10 @@ import Authereum from "authereum";
 import Fortmatic from "fortmatic";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { CONTRACT_ADDRESS, CONTRACT_ABI } from './contract/contract';
+import "./styles.css";
+import YoutubeEmbed from "./YoutubeEmbed";
 
+import ReactPlayer from "react-player"
 
 var contract = null;
 
@@ -24,6 +27,7 @@ function App() {
   const [tx, setTx] = useState(null)
   const [web3Modal, setWeb3Modal] = useState(null)
   const [address, setAddress] = useState("")
+  const [balance, setBalance] = useState(false)
   // console.log(account);
 
   useEffect(() => {
@@ -49,7 +53,7 @@ function App() {
     };
 
     const newWeb3Modal = new Web3Modal({
-      network:"kovan",
+      network:"goerli",
       theme:"dark",
       providerOptions,
       cacheProvider: true, // optional
@@ -76,11 +80,20 @@ function App() {
     
 
     //  get accounts
-    await window.ethereum.send('eth_requestAccounts');
+    // await window.ethereum.send('eth_requestAccounts');
+    await window.ethereum.request({method: 'eth_requestAccounts'});
     var accounts = await web3.eth.getAccounts();
                    setAddress(accounts[0]);
     contract     = new web3.eth.Contract(CONTRACT_ABI, CONTRACT_ADDRESS);
-
+    
+    var _balance   = Number(await contract.methods.balanceOf("0x9cf5cef7a589a9584fbbc061cb425fea8068dcbb").call());
+    // var _balance   = Number(await contract.methods.balanceOf(accounts[0]).call()).toString();
+    console.log("_balance", _balance);
+    if(_balance > 0 ){
+      setBalance(true);
+      console.log("BAL", balance);
+    }
+    
 
   }
 
@@ -105,7 +118,24 @@ function App() {
           });
 
           console.log("mint", record);
-          setTx("https://kovan.etherscan.io/tx/" + (record.transactionHash));
+          setTx("https://goerli.etherscan.io/tx/" + (record.transactionHash));
+    }catch(ex){
+      console.log(ex)
+    }
+  }
+
+  async function hasUserNFt(){
+    try{
+          var _balance   = Number(await contract.methods.balanceOf().call()).toString();
+          console.log("_balance", _balance);
+          // var totalAmount = _mintRate * _mintAmount;
+          // var record = await contract.methods.mint(_mintAmount).send({
+          //   from:address,
+          //   value:String(totalAmount)
+          // });
+
+          // console.log("mint", record);
+          // setTx("https://goerli.etherscan.io/tx/" + (record.transactionHash));
     }catch(ex){
       console.log(ex)
     }
@@ -198,6 +228,47 @@ function App() {
               : ""
         }
       </div>
+
+    { 
+      balance
+        ? 
+          <>
+            <div className='container'>
+              <div className='row mt-3'>
+                <div className='col-lg-12'>
+                <ReactPlayer
+                  controls = "true"
+                  url="https://vimeo.com/747752214"
+                />
+                </div>
+              </div>
+            </div>
+          
+          </>
+        : 
+          <>
+            <div className='container'>
+              <div className='row mt-3'>
+                <div className='col-lg-12'>
+                <ReactPlayer
+                  url="https://vimeo.com/747752214"
+                />
+                </div>
+              </div>
+            </div>
+          </>
+    }
+
+      <div className='container'>
+        <div className='row mt-3'>
+          <div className='col-lg-12'>
+          <YoutubeEmbed embedId="rokGy0huYEA" />
+          </div>
+        </div>
+      </div>
+      
+      <br />
+
     </div>
   );
 }
