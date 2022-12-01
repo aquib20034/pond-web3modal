@@ -1,0 +1,36 @@
+a.qualifyMintAnchor img.qualifyIdle{
+    display: block;
+    margin: 0 auto;
+}
+a.qualifyMintAnchor.hoveredQualifyMint img.qualifyIdle {
+    display: none;
+}
+a.qualifyMintAnchor img.qualifyActive{
+    display: none;
+}
+a.qualifyMintAnchor.hoveredQualifyMint img.qualifyActive {
+    display: block;
+    margin: -15px -3px -2px 3px;
+}
+.qualifyMintWrap {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+}
+.contentWrap h2 {
+    font-size: 101px;
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color: #000;
+    margin-top: 20px;
+}
+.contentWrap h4 {
+    font-size: 46px;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 60px;
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color: #000;
+}
