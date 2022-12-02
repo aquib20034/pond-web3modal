@@ -8,7 +8,8 @@ import Community from '../../assets/community.png'
 import FAQ from '../../assets/FAQ.png'
 import LoreWhitePaper from '../../assets/lorewhitepaper.png'
 import ConnectWalletImg from '../../assets/wallet connect.png'
-
+import HeaderMontain from '../../assets/QjhoVuiaVm-500x500.gif'
+import HeaderLeftMontain from '../../assets/5eR81E5EEh-500x500.gif'
 
 
 
@@ -17,7 +18,6 @@ import ConnectWalletImg from '../../assets/wallet connect.png'
 function Header(){
 
 	const [NavLinkPress, setNavLinkPress] = useState(false);
-	// const toggleHover = () => setNavLinkPress(!NavLinkPress);
 
 
 	return(
@@ -27,6 +27,7 @@ function Header(){
 					<Navbar.Brand href="#home">
 						<img src={logo} />
 					</Navbar.Brand>
+					<img src={HeaderLeftMontain} className="headerLeftRock"/>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse id="responsive-navbar-nav" className="navbar-right">
 						<NavLink href="#2" 
@@ -53,6 +54,7 @@ function Header(){
 							<img src={FAQ} className="itemNormalImage"/>
 						</NavLink>
 					</Navbar.Collapse>
+					<img src={HeaderMontain} className="headerRightRock"/>
 				</Container>
 			</Navbar>
 		</div>

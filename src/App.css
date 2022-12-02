@@ -4,7 +4,10 @@
   background-position: top center;
 }
 nav.customHeader {
-    padding: 67px 0 0px;
+  padding: 67px 0 0px;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: block;
 }
 
 

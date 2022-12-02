@@ -2,11 +2,13 @@ import React, {useState, useEffect} from "react";
 import "./QualifyMint.css";
 import QuailifyMintIdelImg from "../../assets/Calltoarmsidle.png";
 import QuailifyMintActiveImg from "../../assets/Calltoarmsactive.png";
+import QuailifyMintVector from "../../assets/ltEXX6kEVN-500x500.gif";
+import QuailifyFireVector from "../../assets/fireT.gif";
 // import QualifyMint
 
 
 function QualifyMint(){
-const [qualifyMintHove, setQualifyMintHove] = useState(false); 
+    const [qualifyMintHove, setQualifyMintHove] = useState(false); 
     return(
         <section className="bannerContent">
             <div className="container">
@@ -16,12 +18,13 @@ const [qualifyMintHove, setQualifyMintHove] = useState(false);
                             <h2>Epic Adventure Awaits</h2>
                             <h4>Evil is Rising and the realm is in danger, calling all warriors.</h4>
                             <h4>Join the Call to Arms to qualify for Whitelist and gear up to embark on an epic quest, and restore the piece of the realm.</h4>
-                            <div className="qualifyMintWrap">
-
+                            <div className={`qualifyMintWrap ${qualifyMintHove ? "animationHovered" : ""}`}>
+                                <img src={QuailifyFireVector} className="qualifyFireVector"/>
+                                <img src={QuailifyMintVector} className="qualifyMintVector"/>
                                 <a href="#0" className={`qualifyMintAnchor ${qualifyMintHove ? "hoveredQualifyMint" : ""}`}
                                     onMouseOver={() => setQualifyMintHove(true)}
                                     onMouseLeave={() => setQualifyMintHove(false)}
-                                >
+                                >   
                                     <img src={QuailifyMintIdelImg} className="qualifyIdle"/>
                                     <img src={QuailifyMintActiveImg} className="qualifyActive"/>
                                 </a>
