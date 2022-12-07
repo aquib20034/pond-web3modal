@@ -1,0 +1,57 @@
+.aboutContentArea {
+    background-image: url(../../assets/textbox.png);
+    background-size: 1125px;
+    background-position: center top;
+    color: #fff;
+    padding: 130px 130px 50px;
+    margin-top: 18px;
+}
+.aboutContentArea p {
+    margin: 0 auto 15px;
+    font-size: 24px;
+    line-height: 30px;
+}
+section.AboutContent {
+    padding-top: 45px;
+    position: relative;
+    z-index: 2;
+}
+.aboutVectorsArea .AboutImageRight {
+    position: absolute;
+    right: 0;
+    width: 600px;
+    margin: 90px 0 0 0;
+    z-index: -1;
+}
+.aboutVectorsArea .AboutImageLeft {
+    position: absolute;
+    display: none;
+}
+section.AboutContent .aboutTreeImg {
+    position: absolute;
+    left: 0;
+    right: -140px;
+    display: block;
+    margin: -120px auto 0;
+    z-index: 0;
+    width: 450px;
+}
+.sectionHeading.text-center, .aboutContentArea.text-center {
+    position: relative;
+}
+.sectionMontains {
+    max-width: 1920px;
+    position: absolute;
+    top: -290px;
+    margin: auto;
+    display: block;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+@media (min-width:1200px) and (max-width:1439px){
+    .aboutContentArea {
+        padding: 130px 20px 50px;
+    }
+}
