@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@font-face {
+  font-family: "Platino";
+  src: local("Platino"),
+    url('./assets/fonts/Palatino.ttf') format("truetype");
+  font-weight: bold;
+}
+
+.platinoFont{
+  font-family: "Platino";
+}

@@ -1,14 +1,18 @@
-a.qualifyMintAnchor .qualifyIdle{
+.qualifyMintAnchor{
+    background-color: transparent;
+    border: none;
+}
+.qualifyMintAnchor .qualifyIdle{
     display: block;
     margin: 0 auto;
 }
-a.qualifyMintAnchor.hoveredQualifyMint .qualifyIdle {
+.qualifyMintAnchor.hoveredQualifyMint .qualifyIdle {
     display: none;
 }
-a.qualifyMintAnchor .qualifyActive{
+.qualifyMintAnchor .qualifyActive{
     display: none;
 }
-a.qualifyMintAnchor.hoveredQualifyMint .qualifyActive {
+.qualifyMintAnchor.hoveredQualifyMint .qualifyActive {
     display: block;
     margin: -15px -3px -2px 3px;
 }
@@ -17,14 +21,19 @@ a.qualifyMintAnchor.hoveredQualifyMint .qualifyActive {
     margin: 79px auto 0;
     position: relative;
 }
+
 .contentWrap h2 {
-    font-size: 101px;
+    font-size: 109px;
     margin: 0;
     color: #fff;
     text-transform: uppercase;
-    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: #000;
     margin-top: 20px;
+    font-weight: 900;
+}
+.platinoFont {
+    font-family: "Platino";
 }
 .contentWrap h4 {
     font-size: 46px;
@@ -36,7 +45,12 @@ a.qualifyMintAnchor.hoveredQualifyMint .qualifyActive {
     position: relative;
     z-index: 1;
 }
-.qualifyMintWrap a.qualifyMintAnchor {
+.contentWrap h4.platinoFont {
+    font-size: 55px;
+    font-weight: 900;
+    -webkit-text-stroke: 1px #000;
+}
+.qualifyMintWrap .qualifyMintAnchor {
     position: relative;
     z-index: 2;
 }

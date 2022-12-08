@@ -234,7 +234,7 @@ function App() {
             <section className="headerWrap">
               <Navbar collapseOnSelect expand="lg" bg="transparent" variant="light" className="customHeader">
                 <Container>
-                  <Navbar.Brand href="#home">
+                  <Navbar.Brand href="/">
                     <img src={logo} alt="Realm of Pondria"/>
                   </Navbar.Brand>
                   <div className="headerLeftRock">
@@ -286,8 +286,8 @@ function App() {
                   <div className="row">
                       <div className="col-md-12">
                           <div className="contentWrap text-center">
-                              <h2>Epic Adventure Awaits</h2>
-                              <h4>Evil is Rising and the realm is in danger, calling all warriors.</h4>
+                              <h2 className="platinoFont">Epic Adventure Awaits</h2>
+                              <h4 className="platinoFont">Evil is Rising and the realm is in danger, calling all warriors.</h4>
                               <h4>Join the Call to Arms to qualify for Whitelist and gear up to embark on an epic quest, and restore the piece of the realm.</h4>
                               <div className={`qualifyMintWrap ${qualifyMintHove ? "animationHovered" : ""}`}>
                                   <div>
@@ -298,13 +298,13 @@ function App() {
                                   </div>
 
                                   
-                                  <a href="#" className={`qualifyMintAnchor ${qualifyMintHove ? "hoveredQualifyMint" : ""}`  }
+                                  <button  onClick ={mint} className={`qualifyMintAnchor ${qualifyMintHove ? "hoveredQualifyMint" : ""}`  }
                                       onMouseOver={() => setQualifyMintHove(true)}
                                       onMouseLeave={() => setQualifyMintHove(false)}
                                   >   
-                                      <img src={QuailifyMintIdelImg} onClick ={mint}  className="qualifyIdle" alt="QuailifyMintIdelImg"/>
-                                      <img src={QuailifyMintActiveImg} onClick ={mint} className="qualifyActive" alt="QuailifyMintActiveImg"/>
-                                  </a>
+                                      <img src={QuailifyMintIdelImg} className="qualifyIdle" alt="QuailifyMintIdelImg"/>
+                                      <img src={QuailifyMintActiveImg} className="qualifyActive" alt="QuailifyMintActiveImg"/>
+                                  </button>
 
 
                                  
