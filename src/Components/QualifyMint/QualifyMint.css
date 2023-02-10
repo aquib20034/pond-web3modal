@@ -1,14 +1,14 @@
-a.qualifyMintAnchor img.qualifyIdle{
+a.qualifyMintAnchor .qualifyIdle{
     display: block;
     margin: 0 auto;
 }
-a.qualifyMintAnchor.hoveredQualifyMint img.qualifyIdle {
+a.qualifyMintAnchor.hoveredQualifyMint .qualifyIdle {
     display: none;
 }
-a.qualifyMintAnchor img.qualifyActive{
+a.qualifyMintAnchor .qualifyActive{
     display: none;
 }
-a.qualifyMintAnchor.hoveredQualifyMint img.qualifyActive {
+a.qualifyMintAnchor.hoveredQualifyMint .qualifyActive {
     display: block;
     margin: -15px -3px -2px 3px;
 }
@@ -40,23 +40,27 @@ a.qualifyMintAnchor.hoveredQualifyMint img.qualifyActive {
     position: relative;
     z-index: 2;
 }
-.qualifyMintWrap img.qualifyMintVector {
+.qualifyMintWrap .qualifyMintVector {
     width: 150px;
     position: absolute;
     bottom: 70px;
     right: 86px;
     z-index: 0;
 }
-.qualifyMintWrap.animationHovered img.qualifyMintVector {
+.qualifyMintWrap.animationHovered .qualifyMintVector {
     right: 100px;
 }
-.qualifyMintWrap img.qualifyFireVector {
+.qualifyMintWrap .qualifyFireVector {
     /* width: 150px; */
     position: absolute;
     bottom: -100px;
-    right: -100px;
+    right: -150px;
     z-index: 0;
 }
-.qualifyMintWrap.animationHovered img.qualifyFireVector {
-    right: -86px;
+.qualifyMintWrap.animationHovered .qualifyFireVector {
+    right: -136px;
+}
+section.bannerContent {
+    position: relative;
+    z-index: 3;
 }

@@ -14,26 +14,44 @@
 section.AboutContent {
     padding-top: 45px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
-.aboutVectorsArea img.AboutImageRight {
+.aboutVectorsArea .AboutImageRight {
     position: absolute;
     right: 0;
     width: 600px;
     margin: 90px 0 0 0;
+    z-index: -1;
 }
-.aboutVectorsArea img.AboutImageLeft {
+.aboutVectorsArea .AboutImageLeft {
     position: absolute;
     display: none;
 }
-section.AboutContent img.aboutTreeImg {
+section.AboutContent .aboutTreeImg {
     position: absolute;
     left: 0;
     right: -140px;
     display: block;
-    margin: -160px auto 0;
+    margin: -120px auto 0;
     z-index: 0;
+    width: 450px;
 }
 .sectionHeading.text-center, .aboutContentArea.text-center {
     position: relative;
+}
+.sectionMontains {
+    max-width: 1920px;
+    position: absolute;
+    top: -290px;
+    margin: auto;
+    display: block;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+@media (min-width:1200px) and (max-width:1439px){
+    .aboutContentArea {
+        padding: 130px 20px 50px;
+    }
 }

@@ -9,8 +9,10 @@ nav.customHeader {
   margin: 0 auto;
   display: block;
 }
-
-
+.contentContainer{
+  max-width: 1920px;
+  margin: 0 auto;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

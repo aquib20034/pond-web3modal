@@ -1,18 +1,24 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import "./AboutPondria.css";
 import HeadingImage from '../../assets/whatisrop.png';
-import AboutImageLeft from '../../assets/whatisrop.png';
-import AboutImageRight from '../../assets/LBfjXt3j0a-500x500.gif';
-import aboutSectionTree from '../../assets/tree.gif';
+import {Player} from "@lottiefiles/react-lottie-player";
+import sectionMontains from '../../assets/sectionMontains.json';
+import aboutTreeImg from '../../assets/aboutTreeImg.json';
+import AboutImageRight from '../../assets/AboutImageRight.json';
 
 function AboutPondria(){
     return(
         <section className="AboutContent">
-            <img src={aboutSectionTree} className="aboutTreeImg"/>
+            <div className="sectionMontains">
+                <Player src={sectionMontains} loop autoplay/>
+            </div>
+            <div className="aboutTreeImg">
+                <Player src={aboutTreeImg} loop autoplay/>
+            </div>	
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="sectionHeading text-center"><img src={HeadingImage} className="headingImage center-block"/></div>
+                        <div className="sectionHeading text-center"><img src={HeadingImage} className="headingImage center-block" alt="About"/></div>
                     </div>
                     <div className="col-md-8">
                         <div className="aboutContentArea text-center">
@@ -27,8 +33,9 @@ function AboutPondria(){
                     </div>
                     <div className="col-md-4">
                         <div className="aboutVectorsArea">
-                            <img src={AboutImageLeft} className="AboutImageLeft"/>
-                            <img src={AboutImageRight} className="AboutImageRight"/>
+                            <div className="AboutImageRight">
+                                <Player src={AboutImageRight} loop autoplay/>
+                            </div>
                         </div>
                     </div>
                 </div>

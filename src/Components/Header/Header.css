@@ -27,14 +27,14 @@
 nav.customHeader .navbar-right a.navLinks:not(:last-child) {
     margin-right: 12px;
 }
-nav.customHeader img.headerLeftRock {
+nav.customHeader .headerLeftRock {
     position: absolute;
     z-index: 0;
     width: 290px;
     left: 405px;
     bottom: -60px;
 }
-nav.customHeader img.headerRightRock {
+nav.customHeader .headerRightRock {
     position: absolute;
     right: 405px;
     width: 140px;
